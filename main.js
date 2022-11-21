@@ -3,9 +3,12 @@
  */
 const menuEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
+const burguerMenu = document.querySelector(".menu");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 // Escucha el evento click y llama a la funcion, pero no se ejecuta hasta que suceda el evento
 menuEmail.addEventListener("click", toggleDesktopMenu);
+burguerMenu.addEventListener("click", toggleMobileMenu);
 
 /**
  * Oculta o muestra el menu de ordenes 
@@ -13,4 +16,8 @@ menuEmail.addEventListener("click", toggleDesktopMenu);
 function toggleDesktopMenu() {
 	//Agrega o quita la clase inactive, la cual se encargar de ocultar el menu
 	desktopMenu.classList.toggle("inactive");
+}
+
+function toggleMobileMenu() {
+	mobileMenu.classList.toggle("inactive");
 }
